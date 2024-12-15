@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Personal portfolio website</title>
+        <link rel = "stylesheet" href = "styles.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src = "image\Raghava..png" class = "logo">
+                    <ul>
+                        <li><a href = "#">HOME</a></li>
+                        <li><a href = "#">ABOUT</a></li>
+                        <li><a href = "#">PORTFOLIO</a></li>
+                        <li><a href = "#">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="header_text">
+                    <p>AI/ML Engineer</p>
+                    <h1>Hi, I am <span>Raghava B</span><br>from India.</h1>
+                </div>
+            </div>
+        </div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="c1">
+                        <img src="image\wallpaper49.jpg">
+                    </div>
+                    <div class="c2">
+                        <h1 class="subtitle">About Me</h1>
+                        <p>I am an undergraduate Computer Science and Engineering student specializing in Artificial Intelligence and
+                            Machine Learning. I have a strong passion for machine learning and a solid foundation in a variety of programming
+                            languages, including Python, C, C++, Java, HTML and CSS. My focus is on applying AI and ML techniques to
+                            solve real-world problems and continuously expanding my skill set in both software development and AI research.</p>
+                        
+                        <div class="tabt">
+                            <p class="tabl al" onclick="opentab('skills')">Skills</p>
+                            <p class="tabl" onclick="opentab('experience')">Experience</p>
+                            <p class="tabl" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tabc at" id="skills">
+                            <ul>
+                                <li><span>AI/ML</span><br>ML projects</li>
+                                <li><span>WEB design</span><br> deploying websites</li>
+                                <li><span>App design</span><br> deploying applications</li>
+                            </ul>
+                        </div>
+                        <div class="tabc" id="experience">
+                            <ul>
+                                <li><span>Mar 1, 2024 – Mar 31, 2024</span><br>Virtual ML Internship program ∥CodeAlpha</li>
+                            </ul>
+                        </div>
+                        <div class="tabc" id="education">
+                            <ul>
+                                <li><span>2022–2026</span><br>J.S.S. Academy of Technical Education</li>
+                                <li><span>2010–2020</span><br>Swargarani School</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="services">
+            <div class="container">
+                <h1 class="subtitle">My Services</h1>
+                <div class="servicesl">
+                    <div>
+                        <h2>Machine Learning</h2>
+                        <a href="#">learn more</a>
+                    </div>
+                    <div>
+                        <h2>Web design</h2>
+                        <a href="#">learn more</a>
+                    </div>
+                    <div>
+                        <h2>App design</h2>
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="subtitle">My Work</h1>
+                <div class="worklist">
+                    <div class="work">
+                        <img src="image\bg5.jpg">
+                        <div class="layer">
+                            <h3>HealthMachina</h3>
+                            <p>Developed a web application that predicts potential machinery failures by analyzing real-time physical condition
+                                data of industrial equipment.As for the languages used Python (46%) was used to build the predictive model, with HTML (41%) and CSS
+                                (13%) for the website’s design, and Flask was used to seamlessly integrate the model with the web interface. 
+                                Model Performance: The predictive model, built using scikit-learn’s RandomForest classifier, achieved 98%
+                                accuracy in forecasting machinery failures, offering reliable and actionable insights for industry use.</p>
+                                
+                            </div>
+                    </div>
+                </div>
+                <a href="#" class="btn">See more</a>
+            </div>
+        </div>
+
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contactleft">
+                        <h1 class="subtitle">Contact Me</h1>
+                        <p>raghavan1205@gmail.com</p>
+                        <p>6361491581</p>
+                        <a href="" class="btn btn2">Download CV</a>
+                    </div>
+                    <div class="contactright">
+                        <form>
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your EmailID" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tabl");
+            var tabcontents = document.getElementsByClassName("tabc");
+            function opentab(tabn){
+                for(tablink of tablinks){
+                    tablink.classList.remove("al");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("at");
+                }
+                event.currentTarget.classList.add("al");
+                document.getElementById(tabn).classList.add("at");
+            }
+        </script>
+    </body>
+</html>
